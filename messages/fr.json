@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "users": "Utilisateurs",
+    "admin": "Zone Admin",
+    "settings": "Paramètres",
+    "logout": "Se déconnecter"
+  },
+  "auth": {
+    "title": "Se connecter",
+    "sub": "Accédez à votre tableau de bord",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "btn": "Se connecter",
+    "noAccount": "Pas encore de compte ?",
+    "register": "S'inscrire",
+    "error": "Identifiants incorrects",
+    "switchLang": "Langue"
+  },
+  "role": {
+    "ADMIN": "Administrateur",
+    "USER": "Utilisateur"
+  },
+  "metrics": {
+    "users": "Utilisateurs totaux",
+    "active": "Actifs ce mois",
+    "admins": "Administrateurs",
+    "sessions": "Sessions / jour",
+    "vslast": "vs mois dernier",
+    "stable": "Stable"
+  },
+  "dash": {
+    "activity": "Activité récente",
+    "sessions": "Sessions (7 jours)",
+    "greeting": "Bonjour",
+    "access": "Votre accès actuel",
+    "peak": "Pic de la semaine",
+    "normal": "Jours normaux"
+  },
+  "users": {
+    "title": "Gestion des utilisateurs",
+    "all": "Tous",
+    "name": "Nom",
+    "email": "Email",
+    "role": "Rôle",
+    "joined": "Inscrit le",
+    "status": "Statut",
+    "actions": "Actions",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "changeRole": "Changer rôle",
+    "subtitle": "Gérez les accès et les rôles de votre équipe",
+    "count_one": "utilisateur",
+    "count_other": "utilisateurs"
+  },
+  "admin": {
+    "bannerTitle": "Zone Administrateur",
+    "bannerSub": "Accès restreint — visible uniquement par les administrateurs",
+    "stats": "Statistiques avancées",
+    "log": "Journal d'activité",
+    "total": "Total utilisateurs",
+    "admins": "Administrateurs",
+    "users": "Utilisateurs standard",
+    "rate": "Taux admin",
+    "log1": "Rôle modifié — Marc Bernard",
+    "log2": "Nouvel utilisateur créé",
+    "log3": "Export de données effectué",
+    "log4": "Paramètres système mis à jour",
+    "logtime1": "il y a 2h",
+    "logtime2": "il y a 5h",
+    "logtime3": "hier",
+    "logtime4": "il y a 3j"
+  },
+  "settings": {
+    "title": "Paramètres du compte",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "language": "Langue de l'interface",
+    "save": "Enregistrer",
+    "saved": "Modifications enregistrées",
+    "subtitle": "Gérez vos informations personnelles et vos préférences",
+    "personal": "Informations personnelles",
+    "account": "Informations du compte",
+    "role": "Rôle",
+    "status": "Statut",
+    "active": "Actif"
+  },
+  "activity": {
+    "login": "Connexion depuis Paris",
+    "profile": "Profil mis à jour",
+    "newuser": "Nouvel utilisateur inscrit",
+    "export": "Export de données effectué",
+    "perms": "Permissions modifiées",
+    "time1": "il y a 5min",
+    "time2": "il y a 1h",
+    "time3": "il y a 2h",
+    "time4": "il y a 5h",
+    "time5": "hier"
+  },
+  "access": {
+    "denied": "Accès refusé",
+    "deniedSub": "Cette zone est réservée aux administrateurs."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "admin": "Administrateur",
+    "user": "Utilisateur standard",
+    "restricted": "Accès restreint"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "admin": "Admin Zone",
+    "settings": "Settings",
+    "logout": "Sign out"
+  },
+  "auth": {
+    "title": "Sign in",
+    "sub": "Access your dashboard",
+    "email": "Email address",
+    "password": "Password",
+    "btn": "Sign in",
+    "noAccount": "Don't have an account?",
+    "register": "Register",
+    "error": "Invalid credentials",
+    "switchLang": "Language"
+  },
+  "role": {
+    "ADMIN": "Administrator",
+    "USER": "User"
+  },
+  "metrics": {
+    "users": "Total users",
+    "active": "Active this month",
+    "admins": "Administrators",
+    "sessions": "Sessions / day",
+    "vslast": "vs last month",
+    "stable": "Stable"
+  },
+  "dash": {
+    "activity": "Recent activity",
+    "sessions": "Sessions (7 days)",
+    "greeting": "Hello",
+    "access": "Your current access",
+    "peak": "Peak of the week",
+    "normal": "Normal days"
+  },
+  "users": {
+    "title": "User management",
+    "all": "All",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "joined": "Joined",
+    "status": "Status",
+    "actions": "Actions",
+    "active": "Active",
+    "inactive": "Inactive",
+    "changeRole": "Change role",
+    "subtitle": "Manage your team's access and roles",
+    "count_one": "user",
+    "count_other": "users"
+  },
+  "admin": {
+    "bannerTitle": "Admin Zone",
+    "bannerSub": "Restricted access — visible only to administrators",
+    "stats": "Advanced statistics",
+    "log": "Activity log",
+    "total": "Total users",
+    "admins": "Administrators",
+    "users": "Standard users",
+    "rate": "Admin rate",
+    "log1": "Role changed — Marc Bernard",
+    "log2": "New user created",
+    "log3": "Data export completed",
+    "log4": "System settings updated",
+    "logtime1": "2h ago",
+    "logtime2": "5h ago",
+    "logtime3": "yesterday",
+    "logtime4": "3 days ago"
+  },
+  "settings": {
+    "title": "Account settings",
+    "name": "Full name",
+    "email": "Email address",
+    "language": "Interface language",
+    "save": "Save changes",
+    "saved": "Changes saved",
+    "subtitle": "Manage your personal information and preferences",
+    "personal": "Personal information",
+    "account": "Account information",
+    "role": "Role",
+    "status": "Status",
+    "active": "Active"
+  },
+  "activity": {
+    "login": "Login from Paris",
+    "profile": "Profile updated",
+    "newuser": "New user registered",
+    "export": "Data export completed",
+    "perms": "Permissions changed",
+    "time1": "5min ago",
+    "time2": "1h ago",
+    "time3": "2h ago",
+    "time4": "5h ago",
+    "time5": "yesterday"
+  },
+  "access": {
+    "denied": "Access denied",
+    "deniedSub": "This area is restricted to administrators."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "admin": "Administrator",
+    "user": "Standard user",
+    "restricted": "Restricted access"
+  }
+}

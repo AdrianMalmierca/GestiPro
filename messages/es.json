@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "dashboard": "Panel principal",
+    "users": "Usuarios",
+    "admin": "Zona Admin",
+    "settings": "Ajustes",
+    "logout": "Cerrar sesión"
+  },
+  "auth": {
+    "title": "Iniciar sesión",
+    "sub": "Accede a tu panel de control",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "btn": "Iniciar sesión",
+    "noAccount": "¿No tienes cuenta?",
+    "register": "Registrarse",
+    "error": "Credenciales incorrectas",
+    "switchLang": "Idioma"
+  },
+  "role": {
+    "ADMIN": "Administrador",
+    "USER": "Usuario"
+  },
+  "metrics": {
+    "users": "Usuarios totales",
+    "active": "Activos este mes",
+    "admins": "Administradores",
+    "sessions": "Sesiones / día",
+    "vslast": "vs mes anterior",
+    "stable": "Estable"
+  },
+  "dash": {
+    "activity": "Actividad reciente",
+    "sessions": "Sesiones (7 días)",
+    "greeting": "Hola",
+    "access": "Tu acceso actual",
+    "peak": "Pico de la semana",
+    "normal": "Días normales"
+  },
+  "users": {
+    "title": "Gestión de usuarios",
+    "all": "Todos",
+    "name": "Nombre",
+    "email": "Email",
+    "role": "Rol",
+    "joined": "Fecha de registro",
+    "status": "Estado",
+    "actions": "Acciones",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "changeRole": "Cambiar rol",
+    "subtitle": "Gestiona los accesos y roles de tu equipo",
+    "count_one": "usuario",
+    "count_other": "usuarios"
+  },
+  "admin": {
+    "bannerTitle": "Zona Administrador",
+    "bannerSub": "Acceso restringido — visible solo para administradores",
+    "stats": "Estadísticas avanzadas",
+    "log": "Registro de actividad",
+    "total": "Total usuarios",
+    "admins": "Administradores",
+    "users": "Usuarios estándar",
+    "rate": "Tasa admin",
+    "log1": "Rol modificado — Marc Bernard",
+    "log2": "Nuevo usuario creado",
+    "log3": "Exportación de datos completada",
+    "log4": "Configuración del sistema actualizada",
+    "logtime1": "hace 2h",
+    "logtime2": "hace 5h",
+    "logtime3": "ayer",
+    "logtime4": "hace 3 días"
+  },
+  "settings": {
+    "title": "Ajustes de la cuenta",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "language": "Idioma de la interfaz",
+    "save": "Guardar cambios",
+    "saved": "Cambios guardados",
+    "subtitle": "Gestiona tu información personal y preferencias",
+    "personal": "Información personal",
+    "account": "Información de la cuenta",
+    "role": "Rol",
+    "status": "Estado",
+    "active": "Activo"
+  },
+  "activity": {
+    "login": "Inicio de sesión desde París",
+    "profile": "Perfil actualizado",
+    "newuser": "Nuevo usuario registrado",
+    "export": "Exportación de datos completada",
+    "perms": "Permisos modificados",
+    "time1": "hace 5min",
+    "time2": "hace 1h",
+    "time3": "hace 2h",
+    "time4": "hace 5h",
+    "time5": "ayer"
+  },
+  "access": {
+    "denied": "Acceso denegado",
+    "deniedSub": "Esta zona está reservada para administradores."
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "admin": "Administrador",
+    "user": "Usuario estándar",
+    "restricted": "Acceso restringido"
+  }
+}

@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+//This file enable internationalization in the Next.js and configure the routes by language.
+import createNextIntlPlugin from 'next-intl/plugin'
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts')
 
-export default nextConfig;
+const nextConfig = {
+  turbopack: {
+    root: __dirname,
+  },
+}
+
+export default withNextIntl(nextConfig)
