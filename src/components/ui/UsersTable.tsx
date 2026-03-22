@@ -6,7 +6,7 @@ import { useState } from 'react'
 type User = {
   id: string
   name: string | null
-  email: string
+  email: string 
   role: string
   createdAt: Date
 }
