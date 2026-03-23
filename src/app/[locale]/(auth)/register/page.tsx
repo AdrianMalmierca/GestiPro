@@ -21,7 +21,7 @@ export default async function RegisterPage({
         password: t('password'),
         btn: t('registerBtn'),
         hasAccount: t('hasAccount'),
-        login: t('btn'),
+        register: t('btn'),
         error: t('error'),
         quote: t('registerQuote'),
         features: [
