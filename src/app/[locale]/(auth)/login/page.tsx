@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server'
-import { getLocale } from 'next-intl/server'
 import LoginForm from '@/components/ui/LoginForm'
 
 export default async function LoginPage({

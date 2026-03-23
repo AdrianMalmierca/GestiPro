@@ -17,6 +17,13 @@
     "error": "Identifiants incorrects",
     "switchLang": "Langue"
   },
+  "register":{
+    "registerTitle": "Créer un compte",
+    "registerSub": "Rejoignez GestiPro",
+    "name": "Nom complet",
+    "registerBtn": "S'inscrire",
+    "hasAccount": "Déjà un compte ?"
+  },
   "role": {
     "ADMIN": "Administrateur",
     "USER": "Utilisateur"

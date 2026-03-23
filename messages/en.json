@@ -17,6 +17,13 @@
     "error": "Invalid credentials",
     "switchLang": "Language"
   },
+  "register": {
+    "registerTitle": "Create an account",
+    "registerSub": "Join GestiPro",
+    "name": "Full name",
+    "registerBtn": "Sign up",
+    "hasAccount": "Already have an account?"
+  },
   "role": {
     "ADMIN": "Administrator",
     "USER": "User"
