@@ -15,9 +15,7 @@
     "noAccount": "Don't have an account?",
     "register": "Register",
     "error": "Invalid credentials",
-    "switchLang": "Language"
-  },
-  "register": {
+    "switchLang": "Language",
     "registerTitle": "Create an account",
     "registerSub": "Join GestiPro",
     "name": "Full name",

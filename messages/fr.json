@@ -15,9 +15,7 @@
     "noAccount": "Pas encore de compte ?",
     "register": "S'inscrire",
     "error": "Identifiants incorrects",
-    "switchLang": "Langue"
-  },
-  "register":{
+    "switchLang": "Langue",
     "registerTitle": "Créer un compte",
     "registerSub": "Rejoignez GestiPro",
     "name": "Nom complet",

@@ -8,7 +8,7 @@ export default async function RegisterPage({
 }) {
   const { locale } = await params
   setRequestLocale(locale)
-  const t = await getTranslations('register')
+  const t = await getTranslations('auth')
 
   return (
     <RegisterForm
@@ -23,6 +23,12 @@ export default async function RegisterPage({
         hasAccount: t('hasAccount'),
         login: t('btn'),
         error: t('error'),
+        quote: t('registerQuote'),
+        features: [
+          t('registerFeature1'),
+          t('registerFeature2'),
+          t('registerFeature3'),
+        ],
       }}
     />
   )

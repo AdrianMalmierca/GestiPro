@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
@@ -14,35 +14,39 @@ type Labels = {
   hasAccount: string
   login: string
   error: string
+  quote: string
+  features: string[]
 }
 
-export default function RegisterForm({locale, labels,}: { locale: string; labels: Labels}) {
+export default function RegisterForm({locale, labels}: { locale: string; labels: Labels}) {
   const router = useRouter()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [currentLocale, setCurrentLocale] = useState(locale)
+
+  useEffect(() => {
+    setCurrentLocale(window.location.pathname.split('/')[1] || locale)
+  }, [locale])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
     setError('')
-
     const res = await fetch('/api/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password }),
     })
-
     if (!res.ok) {
       const data = await res.json()
       setError(data.error || 'Error')
       setLoading(false)
       return
     }
-
-    router.push(`/${locale}/login`)
+    router.push(`/${currentLocale}/login`)
   }
 
   const inputStyle = {
@@ -56,10 +60,8 @@ export default function RegisterForm({locale, labels,}: { locale: string; labels
   }
 
   return (
-    <div style={{
-      minHeight: '100vh', display: 'flex',
-      background: '#f8f7f4', fontFamily: "'Instrument Sans', sans-serif",
-    }}>
+    <div style={{ minHeight: '100vh', display: 'flex', background: '#f8f7f4', fontFamily: "'Instrument Sans', sans-serif" }}>
+
       {/* Panel izquierdo */}
       <div className="hidden lg:flex" style={{
         width: '420px', background: '#1a1a2e',
@@ -77,25 +79,19 @@ export default function RegisterForm({locale, labels,}: { locale: string; labels
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '16px', fontWeight: 700, color: '#fff',
           }}>G</div>
-          <span style={{ fontSize: '18px', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em' }}>
-            GestiPro
-          </span>
+          <span style={{ fontSize: '18px', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em' }}>GestiPro</span>
         </div>
 
         <div style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ width: '40px', height: '3px', borderRadius: '2px', background: 'linear-gradient(90deg, #7c6fcd, #4ade80)', marginBottom: '24px' }} />
           <p style={{ fontSize: '22px', fontWeight: 500, color: '#fff', lineHeight: 1.4, letterSpacing: '-0.02em', marginBottom: '20px' }}>
-            Rejoignez une équipe qui avance.
+            {labels.quote}
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {[
-              { icon: '✦', text: 'Accès immédiat au tableau de bord' },
-              { icon: '✦', text: 'Interface FR · EN · ES' },
-              { icon: '✦', text: 'Compte sécurisé et chiffré' },
-            ].map((item, i) => (
+            {labels.features.map((text, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span style={{ color: '#7c6fcd', fontSize: '10px' }}>{item.icon}</span>
-                <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.55)' }}>{item.text}</span>
+                <span style={{ color: '#7c6fcd', fontSize: '10px' }}>✦</span>
+                <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.55)' }}>{text}</span>
               </div>
             ))}
           </div>
@@ -120,23 +116,26 @@ export default function RegisterForm({locale, labels,}: { locale: string; labels
                 { code: 'fr', label: 'FR' },
                 { code: 'en', label: 'EN' },
                 { code: 'es', label: 'ES' },
-              ].map(lang => (
-                <button
-                  key={lang.code}
-                  onClick={() => window.location.replace(`/${lang.code}/register`)}
-                  style={{
-                    padding: '5px 12px', borderRadius: '7px', border: 'none',
-                    background: locale === lang.code ? '#fff' : 'transparent',
-                    color: locale === lang.code ? '#0f0f1a' : '#999',
-                    fontSize: '12px', fontWeight: locale === lang.code ? 600 : 400,
-                    cursor: 'pointer', transition: 'all 0.15s',
-                    boxShadow: locale === lang.code ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                    fontFamily: "'Instrument Sans', sans-serif",
-                  }}
-                >
-                  {lang.label}
-                </button>
-              ))}
+              ].map(lang => {
+                const isActive = currentLocale === lang.code
+                return (
+                  <button
+                    key={lang.code}
+                    onClick={() => window.location.replace(`/${lang.code}/register`)}
+                    style={{
+                      padding: '5px 12px', borderRadius: '7px', border: 'none',
+                      background: isActive ? '#fff' : 'transparent',
+                      color: isActive ? '#0f0f1a' : '#999',
+                      fontSize: '12px', fontWeight: isActive ? 600 : 400,
+                      cursor: 'pointer', transition: 'all 0.15s',
+                      boxShadow: isActive ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                      fontFamily: "'Instrument Sans', sans-serif",
+                    }}
+                  >
+                    {lang.label}
+                  </button>
+                )
+              })}
             </div>
           </div>
 
@@ -200,7 +199,7 @@ export default function RegisterForm({locale, labels,}: { locale: string; labels
 
           <p style={{ fontSize: '13px', color: '#aaa', textAlign: 'center', marginTop: '24px' }}>
             {labels.hasAccount}{' '}
-            <Link href={`/${locale}/login`} style={{ color: '#7c6fcd', fontWeight: 500, textDecoration: 'none' }}>
+            <Link href={`/${currentLocale}/login`} style={{ color: '#7c6fcd', fontWeight: 500, textDecoration: 'none' }}>
               {labels.login}
             </Link>
           </p>
