@@ -61,37 +61,74 @@ export default function RegisterForm({locale, labels}: { locale: string; labels:
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', background: '#f8f7f4', fontFamily: "'Instrument Sans', sans-serif" }}>
+      {/*Left dashboard*/}
+      <div style={{
+        width: '420px',
+        background: '#1a1a2e',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        padding: '48px',
+        position: 'relative',
+        overflow: 'hidden',
+        flexShrink: 0,
+      }}
+        className="hidden lg:flex"
+      >
+        {/*Circles*/}
+        <div style={{
+          position: 'absolute', top: '-60px', right: '-60px',
+          width: '300px', height: '300px', borderRadius: '50%',
+          background: 'rgba(124, 111, 205, 0.15)',
+        }} />
+        <div style={{
+          position: 'absolute', bottom: '80px', left: '-40px',
+          width: '200px', height: '200px', borderRadius: '50%',
+          background: 'rgba(74, 222, 128, 0.08)',
+        }} />
+        <div style={{
+          position: 'absolute', bottom: '-30px', right: '40px',
+          width: '150px', height: '150px', borderRadius: '50%',
+          background: 'rgba(124, 111, 205, 0.1)',
+        }} />
 
-      {/* Panel izquierdo */}
-      <div className="hidden lg:flex" style={{
-        width: '420px', background: '#1a1a2e',
-        flexDirection: 'column', justifyContent: 'space-between',
-        padding: '48px', position: 'relative', overflow: 'hidden', flexShrink: 0,
-      }}>
-        <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '300px', height: '300px', borderRadius: '50%', background: 'rgba(124, 111, 205, 0.15)' }} />
-        <div style={{ position: 'absolute', bottom: '80px', left: '-40px', width: '200px', height: '200px', borderRadius: '50%', background: 'rgba(74, 222, 128, 0.08)' }} />
-        <div style={{ position: 'absolute', bottom: '-30px', right: '40px', width: '150px', height: '150px', borderRadius: '50%', background: 'rgba(124, 111, 205, 0.1)' }} />
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div style={{
-            width: '36px', height: '36px', borderRadius: '10px',
-            background: 'linear-gradient(135deg, #7c6fcd, #4f46e5)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: '16px', fontWeight: 700, color: '#fff',
-          }}>G</div>
-          <span style={{ fontSize: '18px', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em' }}>GestiPro</span>
+        {/* Logo */}
+        <div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div style={{
+              width: '36px', height: '36px', borderRadius: '10px',
+              background: 'linear-gradient(135deg, #7c6fcd, #4f46e5)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: '16px', fontWeight: 700, color: '#fff',
+            }}>G</div>
+            <span style={{ fontSize: '18px', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em' }}>
+              GestiPro
+            </span>
+          </div>
         </div>
 
+        {/* Quote */}
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ width: '40px', height: '3px', borderRadius: '2px', background: 'linear-gradient(90deg, #7c6fcd, #4ade80)', marginBottom: '24px' }} />
-          <p style={{ fontSize: '22px', fontWeight: 500, color: '#fff', lineHeight: 1.4, letterSpacing: '-0.02em', marginBottom: '20px' }}>
-            {labels.quote}
+          <div style={{
+            width: '40px', height: '3px', borderRadius: '2px',
+            background: 'linear-gradient(90deg, #7c6fcd, #4ade80)',
+            marginBottom: '24px',
+          }} />
+          <p style={{
+            fontSize: '22px', fontWeight: 500, color: '#fff',
+            lineHeight: 1.4, letterSpacing: '-0.02em', marginBottom: '20px',
+          }}>
+            Gérez votre équipe avec clarté et efficacité.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {labels.features.map((text, i) => (
+            {[
+              { icon: '✦', text: 'Gestion des rôles Admin / User' },
+              { icon: '✦', text: 'Interface FR · EN · ES' },
+              { icon: '✦', text: 'Données en temps réel' },
+            ].map((item, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span style={{ color: '#7c6fcd', fontSize: '10px' }}>✦</span>
-                <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.55)' }}>{text}</span>
+                <span style={{ color: '#7c6fcd', fontSize: '10px' }}>{item.icon}</span>
+                <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.55)' }}>{item.text}</span>
               </div>
             ))}
           </div>
