@@ -8,7 +8,7 @@
 A production-ready web dashboard built with Next.js 14 App Router, featuring JWT authentication, role-based access control (ADMIN/USER), and full internationalization across three languages: French, English, and Spanish.
 
 ## Live Demo
-> 🔗 [gestipro.vercel.app](https://gestipro.vercel.app) *(deploy in progress)*
+> [https://gestipro-git-main-adrians-projects-9d5c028d.vercel.app](https://gestipro.vercel.app)
 
 ### Demo Credentials
 | Role | Email | Password |
@@ -21,36 +21,36 @@ A production-ready web dashboard built with Next.js 14 App Router, featuring JWT
 Small and medium-sized enterprises (PMEs) in France frequently need internal management tools to handle team members, assign permissions, and manage access levels — yet most off-the-shelf solutions are either too complex or not localized for multilingual teams.
 
 GestiPro solves this by providing a clean, lightweight, self-hostable dashboard that:
-- Enforces role-based access so admins control what users can see and do
-- Supports three languages out of the box, making it suitable for international teams
-- Demonstrates a complete authentication and authorization flow using modern web standards
+- Enforces role-based access so admins control what users can see and do.
+- Supports three languages out of the box, making it suitable for international teams.
+- Demonstrates a complete authentication and authorization flow using modern web standards.
 
 ## Features
 
 ### Authentication
-- Secure sign-in and registration with email and password
-- Passwords hashed with bcrypt (12 salt rounds)
-- Sessions managed via JWT (no database sessions needed)
-- Protected routes via Next.js middleware — unauthenticated users are redirected to login
+- Secure sign-in and registration with email and password.
+- Passwords hashed with bcrypt (12 salt rounds).
+- Sessions managed via JWT (no database sessions needed).
+- Protected routes via Next.js middleware — unauthenticated users are redirected to login.
 
 ### Role-Based Access Control
-- Two roles: **ADMIN** and **USER**
-- Admin-only pages are protected at three levels: middleware, server component, and UI
+- Two roles: **ADMIN** and **USER**.
+- Admin-only pages are protected at three levels: middleware, server component, and UI.
 - Admins can promote/demote users directly from the Users table
 - Non-admin users cannot see the Admin Zone in the sidebar or navigate to it
 
 ### Internationalization (i18n)
-- Three languages: French 🇫🇷, English 🇬🇧, Spanish 🇪🇸
-- Language switcher in the top navigation bar and in Settings
-- Locale-prefixed URLs: `/fr/dashboard`, `/en/users`, `/es/settings`
-- All UI text, labels, dates, and dynamic content are fully translated
-- Built with `next-intl` v4 using the App Router pattern
+- Three languages: French 🇫🇷, English 🇬🇧, Spanish 🇪🇸.
+- Language switcher in the top navigation bar and in Settings.
+- Locale-prefixed URLs: `/fr/dashboard`, `/en/users`, `/es/settings`.
+- All UI text, labels, dates, and dynamic content are fully translated.
+- Built with `next-intl` v4 using the App Router pattern.
 
 ### Dashboard Pages
-- **Dashboard** — real-time metrics from the database, activity feed, session chart, user access card
-- **Users** — paginated user table with role badges, avatar initials, filter by role, change role (admin only)
-- **Admin Zone** — restricted panel with advanced stats, role distribution chart, and activity log
-- **Settings** — personal info editor, language selector, account information card
+- **Dashboard** — real-time metrics from the database, activity feed, session chart, user access card.
+- **Users** — paginated user table with role badges, avatar initials, filter by role, change role (admin only).
+- **Admin Zone** — restricted panel with advanced stats, role distribution chart, and activity log.
+- **Settings** — personal info editor, language selector, account information card.
 
 ## Tech Stack
 | Layer | Technology | Reason |
@@ -150,13 +150,6 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) — it redirects to `/fr/login`.
-
-### Environment Variables
-```env
-DATABASE_URL="file:./dev.db"
-NEXTAUTH_SECRET="your-secret-here-minimum-32-characters"
-NEXTAUTH_URL="http://localhost:3000"
-```
 
 ## Architecture Decisions
 
