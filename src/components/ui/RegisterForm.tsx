@@ -12,7 +12,7 @@ type Labels = {
   password: string
   btn: string
   hasAccount: string
-  login: string
+  register: string
   error: string
   quote: string
   features: string[]
@@ -237,7 +237,7 @@ export default function RegisterForm({locale, labels}: { locale: string; labels:
           <p style={{ fontSize: '13px', color: '#aaa', textAlign: 'center', marginTop: '24px' }}>
             {labels.hasAccount}{' '}
             <Link href={`/${currentLocale}/login`} style={{ color: '#7c6fcd', fontWeight: 500, textDecoration: 'none' }}>
-              {labels.login}
+              {labels.register}
             </Link>
           </p>
         </div>
