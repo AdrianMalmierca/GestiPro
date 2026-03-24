@@ -16,21 +16,21 @@ export default async function UsersPage({ params,
 
   const session = await getServerSession(authOptions)
 
-  console.log('👤 SESSION USER:', session?.user)
+  //console.log('👤 SESSION USER:', session?.user)
 
-  const t = await getTranslations()
+  const t = await getTranslations('users')
   const users = await prisma.user.findMany({ orderBy: { createdAt: 'desc' } })
 
-  console.log('👥 USERS PAGE LOCALE:', await getLocale())
+  //console.log('👥 USERS PAGE LOCALE:', await getLocale())
 
   return (
     <div>
       <div className="mb-8">
         <h1 className="font-semibold" style={{ fontSize: '22px', letterSpacing: '-0.02em', color: '#0f0f0f' }}>
-          {t('users.title')}
+          {t('title')}
         </h1>
         <p style={{ fontSize: '14px', color: '#999', margin: 0 }}>
-          {t('users.subtitle')}
+          {t('subtitle')}
         </p>
       </div>
 
@@ -39,7 +39,7 @@ export default async function UsersPage({ params,
           users={users}
           isAdmin={session?.user?.role === 'ADMIN'}
           currentUserId={session?.user?.id}
-          countLabel={{ one: t('users.count_one'), other: t('users.count_other') }}
+          countLabel={{ one: t('count_one'), other: t('count_other') }}
         />
       </div>
     </div>

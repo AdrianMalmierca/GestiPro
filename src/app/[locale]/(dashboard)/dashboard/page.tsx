@@ -61,7 +61,7 @@ export default async function DashboardPage({ params,
   return (
     <div style={{ maxWidth: '1100px' }}>
 
-      {/* Bienvenida */}
+      {/* Greetings */}
       <div style={{ marginBottom: '28px' }}>
         <h1 style={{
           fontSize: '22px', fontWeight: 600, color: '#0f0f1a',
@@ -76,7 +76,7 @@ export default async function DashboardPage({ params,
         </p>
       </div>
 
-      {/* Métricas */}
+      {/* Metrics */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -121,14 +121,14 @@ export default async function DashboardPage({ params,
         ))}
       </div>
 
-      {/* Cards inferiores */}
+      {/* Cards */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '14px',
       }}>
 
-        {/* Actividad reciente */}
+        {/* Recent activity */}
         <div style={{
           background: '#fff', borderRadius: '16px',
           border: '1px solid #f0f0f0', padding: '22px',
@@ -148,7 +148,7 @@ export default async function DashboardPage({ params,
           <ActivityList />
         </div>
 
-        {/* Gráfico de sesiones */}
+        {/* Sessions chart*/}
         <div style={{
           background: '#fff', borderRadius: '16px',
           border: '1px solid #f0f0f0', padding: '22px',
@@ -193,7 +193,7 @@ export default async function DashboardPage({ params,
             ))}
           </div>
 
-          {/* Leyenda */}
+          {/* Legend */}
           <div style={{
             marginTop: '16px', paddingTop: '16px',
             borderTop: '1px solid #f5f5f5',
@@ -211,7 +211,7 @@ export default async function DashboardPage({ params,
           </div>
         </div>
 
-        {/* Card de rol del usuario actual */}
+        {/* Rol card */}
         <div style={{
           background: 'linear-gradient(135deg, #1a1a2e, #2d2d5e)',
           borderRadius: '16px',
