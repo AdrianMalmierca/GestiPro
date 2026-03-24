@@ -12,7 +12,7 @@ type Labels = {
   password: string
   btn: string
   hasAccount: string
-  register: string
+  login: string
   error: string
   quote: string
   features: string[]
@@ -135,7 +135,7 @@ export default function RegisterForm({locale, labels}: { locale: string; labels:
         </div>
       </div>
 
-      {/* Panel derecho */}
+      {/* Rigth dashboard */}
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px' }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
 
@@ -237,7 +237,7 @@ export default function RegisterForm({locale, labels}: { locale: string; labels:
           <p style={{ fontSize: '13px', color: '#aaa', textAlign: 'center', marginTop: '24px' }}>
             {labels.hasAccount}{' '}
             <Link href={`/${currentLocale}/login`} style={{ color: '#7c6fcd', fontWeight: 500, textDecoration: 'none' }}>
-              {labels.register}
+              {labels.login}
             </Link>
           </p>
         </div>

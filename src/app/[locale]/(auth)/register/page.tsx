@@ -7,7 +7,6 @@ export default async function RegisterPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  setRequestLocale(locale)
   const t = await getTranslations('auth')
 
   return (
@@ -21,7 +20,7 @@ export default async function RegisterPage({
         password: t('password'),
         btn: t('registerBtn'),
         hasAccount: t('hasAccount'),
-        register: t('btn'),
+        login: t('btn'),
         error: t('error'),
         quote: t('registerQuote'),
         features: [

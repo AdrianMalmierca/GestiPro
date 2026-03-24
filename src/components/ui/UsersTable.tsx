@@ -17,7 +17,7 @@ export default function UsersTable({ users, isAdmin, currentUserId, countLabel}:
   countLabel: { one: string; other: string }
 }) {
 
-  console.log('currentUserId recibido:', currentUserId)
+  //console.log('currentUserId recibido:', currentUserId)
   const t = useTranslations('users')
   const [filter, setFilter] = useState('all')
   const [list, setList] = useState(users)

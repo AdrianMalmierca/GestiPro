@@ -41,7 +41,7 @@ export default function SettingsForm({ session }: { session: Session | null }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
 
-      {/* Nombre */}
+      {/* Name */}
       <div>
         <label style={{
           display: 'block', fontSize: '13px', fontWeight: 500,
