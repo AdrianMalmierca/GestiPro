@@ -32,7 +32,7 @@ export default async function SettingsPage({ params,
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', alignItems: 'start' }}>
 
-        {/* Formulario */}
+        {/* Form */}
         <div style={{
           background: '#fff', borderRadius: '16px',
           border: '1px solid #f0f0f0', padding: '24px',
@@ -44,7 +44,7 @@ export default async function SettingsPage({ params,
           <SettingsForm session={session} />
         </div>
 
-        {/* Card info cuenta */}
+        {/* Info card */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           <div style={{
             background: 'linear-gradient(135deg, #1a1a2e, #2d2d5e)',
@@ -61,7 +61,7 @@ export default async function SettingsPage({ params,
               fontSize: '20px', fontWeight: 700, color: '#fff',
               marginBottom: '16px',
             }}>
-              {session?.user?.name?.split(' ').map(n => n[0]).join('').toUpperCase() || 'U'}
+              {session?.user?.name?.split(' ').map((n: string) => n[0]).join('').toUpperCase() || 'U'}
             </div>
             <p style={{ fontSize: '18px', fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '-0.02em' }}>
               {session?.user?.name}
@@ -87,7 +87,7 @@ export default async function SettingsPage({ params,
             </div>
           </div>
 
-          {/* Info técnica */}
+          {/* Technique info */}
           <div style={{
             background: '#fff', borderRadius: '16px',
             border: '1px solid #f0f0f0', padding: '20px',

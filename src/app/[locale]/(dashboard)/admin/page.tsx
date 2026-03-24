@@ -109,7 +109,7 @@ export default async function AdminPage({ params,
         ))}
       </div>
 
-      {/* Dos columnas */}
+      {/* Columns */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
 
         {/* Log */}
@@ -143,7 +143,7 @@ export default async function AdminPage({ params,
           </div>
         </div>
 
-        {/* Distribución */}
+        {/* Distribution */}
         <div style={{
           background: '#fff', borderRadius: '16px',
           border: '1px solid #f0f0f0', padding: '22px',
