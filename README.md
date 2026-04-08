@@ -44,7 +44,7 @@ Split-screen login page with demo account shortcuts. Language can be switched be
 ### Dashboard
 Real-time metrics pulled from the database, recent activity feed, sessions chart, and current user access card.
 
-![Dashboard](assets/dashboard.png)
+![Dashboard](assets/dahsboard.png)
 
 ### Users
 Full user table with role badges, avatar initials, and role filter. Admins can promote/demote any user except themselves.
