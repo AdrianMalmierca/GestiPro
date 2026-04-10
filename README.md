@@ -12,7 +12,7 @@ A production-ready web dashboard built with Next.js App Router, featuring JWT au
 
 ## Live Demo
 
-🔗 [gestipro-git-main-adrians-projects-9d5c028d.vercel.app](https://gestipro-git-main-adrians-projects-9d5c028d.vercel.app)
+🔗 [gestipro-my2ezos6p-adrians-projects-9d5c028d.vercel.app](https://gestipro-my2ezos6p-adrians-projects-9d5c028d.vercel.app)
 
 ### Demo Credentials
 
