@@ -78,7 +78,7 @@ export default async function DashboardPage({ params,
       </div>
 
       {/* Metrics */}
-      Metric
+      <MetricsGrid metrics={metrics} />
 
       {/* Cards */}
       <div style={{
