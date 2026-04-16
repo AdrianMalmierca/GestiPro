@@ -12,7 +12,7 @@ A production-ready web dashboard built with Next.js App Router, featuring JWT au
 
 ## Live Demo
 
-🔗 [gestipro-my2ezos6p-adrians-projects-9d5c028d.vercel.app](https://gestipro-my2ezos6p-adrians-projects-9d5c028d.vercel.app)
+🔗 [gestipro-6ve01sm53-adrians-projects-9d5c028d.vercel.app](https://gestipro-6ve01sm53-adrians-projects-9d5c028d.vercel.app/en/login)
 
 ### Demo Credentials
 
@@ -144,10 +144,13 @@ gestipro/
 │   │   │   ├── Sidebar.tsx          # Navigation + user info + logout
 │   │   │   └── Topbar.tsx           # Page title + language switcher
 │   │   └── ui/
-│   │       ├── LoginForm.tsx        # Client-side login form
+|   |       ├── LoginForm.tsx        # Client-side login form
 │   │       ├── UsersTable.tsx       # Interactive users table with filters
-│   │       ├── ActivityList.tsx     # Activity feed (server component)
-│   │       └── SettingsForm.tsx     # Settings form with lang switcher
+│   │       ├── SettingsForm.tsx     # Settings form with lang switcher
+│   │       └── dashborad     # Dashborad components (server component)
+│   │               ├── ActivityList.tsx
+│   │               ├── MetricsGrid.tsx
+│   │               └── SessionChart.tsx
 │   ├── lib/
 │   │   ├── auth.ts                  # NextAuth config + authorize logic
 │   │   └── prisma.ts                # Prisma client singleton
@@ -256,14 +259,8 @@ Working with the App Router forced me to think clearly about the boundary betwee
 ### i18n Complexity in SSR
 Internationalization in a full-stack SSR app is significantly more complex than in a SPA. The main challenge was ensuring `setRequestLocale` was called in every page component receiving `params`, not just in the root layout. Without this, `getTranslations()` silently falls back to the default locale regardless of the URL.
 
-### Prisma Version Compatibility
-During development I encountered significant breaking changes between Prisma v5 and v7 — particularly around enum support in SQLite and the new `prisma.config.ts` pattern introduced in v7. This reinforced the importance of pinning dependency versions and reading changelogs carefully before upgrading.
-
 ### Middleware Composition
 Combining two middleware libraries (next-intl and next-auth) in a single `middleware.ts` requires careful ordering. The auth check must happen before i18n processing for protected routes, but i18n must run first on public routes to detect the locale for redirect URLs.
-
-### JWT Session Extension
-Extending NextAuth's session type with custom fields (role, id) requires both runtime callbacks in `auth.ts` and TypeScript declaration merging in `next-auth.d.ts`. Getting this right across `jwt()` and `session()` callbacks was a key learning about how NextAuth's dual runtime/type system works.
 
 ---
 
