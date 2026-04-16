@@ -47,7 +47,7 @@ export default function Topbar({ session }: { session: Session | null }) {
       zIndex: 10,
       boxShadow: '0 1px 0 #f5f5f5',
     }}>
-      {/* Título de página */}
+      {/* Title */}
       <div>
         <h2 style={{
           fontSize: '16px',
@@ -60,10 +60,10 @@ export default function Topbar({ session }: { session: Session | null }) {
         </h2>
       </div>
 
-      {/* Derecha: idioma + usuario */}
+      {/* Right: Language selector + User info */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
 
-        {/* Selector de idioma */}
+        {/* Language selector */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
@@ -98,7 +98,7 @@ export default function Topbar({ session }: { session: Session | null }) {
           })}
         </div>
 
-        {/* Info usuario */}
+        {/* User info */}
         <div style={{
           display: 'flex',
           alignItems: 'center',

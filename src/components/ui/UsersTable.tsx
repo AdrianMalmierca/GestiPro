@@ -74,7 +74,7 @@ export default function UsersTable({ users, isAdmin, currentUserId, countLabel}:
         </span>
       </div>
 
-      {/* Tabla */}
+      {/* Table */}
       <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid #f0f0f0' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
@@ -98,7 +98,7 @@ export default function UsersTable({ users, isAdmin, currentUserId, countLabel}:
                 onMouseEnter={e => (e.currentTarget.style.background = '#fafafa')}
                 onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
               >
-                {/* Nombre + avatar */}
+                {/* Name + avatar */}
                 <td style={{ padding: '14px 16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{
@@ -134,7 +134,7 @@ export default function UsersTable({ users, isAdmin, currentUserId, countLabel}:
                   </span>
                 </td>
 
-                {/* Fecha */}
+                {/* Date */}
                 <td style={{ padding: '14px 16px' }}>
                   <span style={{ fontSize: '13px', color: '#bbb' }}>
                     {new Date(user.createdAt).toLocaleDateString('fr-FR', {

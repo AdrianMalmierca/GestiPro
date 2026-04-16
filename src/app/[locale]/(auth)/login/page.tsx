@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LoginForm from '@/components/ui/LoginForm'
 
 export default async function LoginPage({
@@ -7,6 +7,7 @@ export default async function LoginPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('auth')
 
   return (

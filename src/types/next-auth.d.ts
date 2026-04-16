@@ -5,10 +5,10 @@ declare module 'next-auth' {
     user: {
       id: string
       role: string
-    } & DefaultSession['user']
+    } & DefaultSession['user'] //we dont lose more information, like name, email...
   }
 
-  interface User {
+  interface User { //is for the users that we return in the authorize function, so we can keep the role into the token
     role: string
   }
 }

@@ -2,9 +2,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import RegisterForm from '@/components/ui/RegisterForm'
 
 export default async function RegisterPage({
-  params,
+  params, //It receives the locale as a parameter from the URL, we need to set it for the translations to work
 }: {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }> //We define the type of the params, which is a promise that resolves to an object with a locale string
 }) {
   const { locale } = await params
   setRequestLocale(locale)
@@ -22,13 +22,7 @@ export default async function RegisterPage({
         btn: t('registerBtn'),
         hasAccount: t('hasAccount'),
         login: t('btn'),
-        error: t('error'),
-        quote: t('registerQuote'),
-        features: [
-          t('registerFeature1'),
-          t('registerFeature2'),
-          t('registerFeature3'),
-        ],
+        error: t('error')
       }}
     />
   )

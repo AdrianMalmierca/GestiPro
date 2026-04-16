@@ -6,7 +6,9 @@ import { prisma } from './prisma'
 export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt', //keep the token in JWT, not in the db. So when the user makes login, it creates the token
-    //and keep it in cookies. For each request, we check the token and is validated, without db 
+    //and keep it in cookies. For each request, we check the token and is validated, without db so it's faster, 
+    // but we need to keep in mind that if we want to invalidate a token, we need to wait until it expires, 
+    // or we can change the secret to invalidate all tokens.
   },
   pages: {
     signIn: '/login', //to create my own login page

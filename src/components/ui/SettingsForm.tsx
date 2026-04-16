@@ -120,7 +120,7 @@ export default function SettingsForm({ session }: { session: Session | null }) {
         </div>
       </div>
 
-      {/* Botón guardar */}
+      {/* Save button */}
       <button
         onClick={handleSave}
         style={{

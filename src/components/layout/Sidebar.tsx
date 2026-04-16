@@ -6,13 +6,6 @@ import { useLocale, useTranslations } from 'next-intl'
 import { signOut } from 'next-auth/react'
 import { Session } from 'next-auth'
 
-const navIcons: Record<string, string> = {
-  dashboard: '▪',
-  users: '▪',
-  admin: '▪',
-  settings: '▪',
-}
-
 export default function Sidebar({ session }: { session: Session | null }) {
   const t = useTranslations('nav')
   const locale = useLocale()
@@ -21,12 +14,12 @@ export default function Sidebar({ session }: { session: Session | null }) {
   const currentPage = pathname.split('/').pop() || ''
 
   const navItems = [
-    { href: `/${locale}/dashboard`, label: t('dashboard'), key: 'dashboard' },
-    { href: `/${locale}/users`, label: t('users'), key: 'users' },
+    { href: `/${locale}/dashboard`, label: t('dashboard'), key: 'dashboard', icon : '⊞' },
+    { href: `/${locale}/users`, label: t('users'), key: 'users', icon : '⊙' },
     ...(session?.user?.role === 'ADMIN'
-      ? [{ href: `/${locale}/admin`, label: t('admin'), key: 'admin', adminOnly: true }]
+      ? [{ href: `/${locale}/admin`, label: t('admin'), key: 'admin', icon : '⬡', adminOnly: true }]
       : []),
-    { href: `/${locale}/settings`, label: t('settings'), key: 'settings' },
+    { href: `/${locale}/settings`, label: t('settings'), key: 'settings', icon : '⊛' },
   ]
 
   const initials = session?.user?.name
@@ -102,17 +95,14 @@ export default function Sidebar({ session }: { session: Session | null }) {
                   }
                 }}
               >
-                {/* Icono según sección */}
+                {/* Icon for each item */}
                 <div style={{
                   width: '28px', height: '28px', borderRadius: '7px',
                   background: isActive ? 'rgba(124,111,205,0.3)' : 'rgba(255,255,255,0.06)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   flexShrink: 0, fontSize: '13px',
                 }}>
-                  {item.key === 'dashboard' && '⊞'}
-                  {item.key === 'users' && '⊙'}
-                  {item.key === 'admin' && '⬡'}
-                  {item.key === 'settings' && '⊛'}
+                  {item.icon}
                 </div>
                 <span>{item.label}</span>
                 {item.adminOnly && (
@@ -127,14 +117,14 @@ export default function Sidebar({ session }: { session: Session | null }) {
           })}
         </div>
 
-        {/* Separador */}
+        {/* Divider */}
         <div style={{
           margin: '16px 10px',
           height: '1px',
           background: 'rgba(255,255,255,0.06)',
         }} />
 
-        {/* Badge de rol */}
+        {/* Role badge */}
         <div style={{
           margin: '0 4px',
           padding: '10px 12px',

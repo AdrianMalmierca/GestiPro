@@ -31,6 +31,19 @@ export default async function AdminPage({ params,
     { text: t('admin.log4'), time: t('admin.logtime4'), color: '#f59e0b', bg: '#fffbeb', icon: '✎' },
   ]
 
+  const stats = [
+    { label: t('admin.total'), value: users.length, color: '#7c6fcd', bg: '#f0eeff' },
+    { label: t('admin.admins'), value: admins.length, color: '#4f46e5', bg: '#eef2ff' },
+    { label: t('admin.users'), value: regular.length, color: '#16a34a', bg: '#f0fdf4' },
+  ]
+
+  const distribution = [
+    { label: 'Total', value: users.length, color: '#0f0f1a', bg: '#f5f5f5' },
+    { label: t('admin.admins'), value: admins.length, color: '#7c6fcd', bg: '#f0eeff' },
+    { label: 'Utilisateurs', value: regular.length, color: '#16a34a', bg: '#f0fdf4' },
+    { label: t('admin.rate'), value: `${Math.round((admins.length / users.length) * 100)}%`, color: '#f59e0b', bg: '#fffbeb' },
+  ]
+
   return (
     <div style={{ maxWidth: '1100px' }}>
 
@@ -81,10 +94,7 @@ export default async function AdminPage({ params,
         display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
         gap: '14px', marginBottom: '24px',
       }}>
-        {[{ label: t('admin.total'), value: users.length, color: '#7c6fcd', bg: '#f0eeff' },
-          { label: t('admin.admins'), value: admins.length, color: '#4f46e5', bg: '#eef2ff' },
-          { label: t('admin.users'), value: regular.length, color: '#16a34a', bg: '#f0fdf4' },
-        ].map((stat, i) => (
+        {stats.map((stat, i) => (
           <div key={i} style={{
             background: '#fff', borderRadius: '16px',
             border: '1px solid #f0f0f0', padding: '20px',
@@ -174,12 +184,7 @@ export default async function AdminPage({ params,
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
-              { label: 'Total', value: users.length, color: '#0f0f1a', bg: '#f5f5f5' },
-              { label: t('admin.admins'), value: admins.length, color: '#7c6fcd', bg: '#f0eeff' },
-              { label: 'Utilisateurs', value: regular.length, color: '#16a34a', bg: '#f0fdf4' },
-              { label: t('admin.rate'), value: `${Math.round((admins.length / users.length) * 100)}%`, color: '#f59e0b', bg: '#fffbeb' },
-            ].map((row, i) => (
+            {distribution.map((row, i) => (
               <div key={i} style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 padding: '8px 12px', borderRadius: '10px', background: '#fafafa',

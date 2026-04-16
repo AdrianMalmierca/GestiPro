@@ -14,8 +14,6 @@ type Labels = {
   hasAccount: string
   login: string
   error: string
-  quote: string
-  features: string[]
 }
 
 export default function RegisterForm({locale, labels}: { locale: string; labels: Labels}) {

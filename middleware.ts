@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getToken } from 'next-auth/jwt'
 import { routing } from './src/routing'
 
+//this file is the middleware of the application, it's used to check if the user is authenticated before accessing 
+// any page that is not public (login and register) and to handle the internationalization of the application.
 const intlMiddleware = createMiddleware(routing)
 
 export default async function middleware(req: NextRequest) {
@@ -22,5 +24,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'], // Exclude API routes, Next.js internals, and static files
 }
