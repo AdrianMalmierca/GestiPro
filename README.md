@@ -41,6 +41,11 @@ Split-screen login page with demo account shortcuts. Language can be switched be
 
 ![Login](assets/login.png)
 
+### Register
+Split-screen register page in case you dont have an account. Language can be switched before signing in.
+
+![Login](assets/register.png)
+
 ### Dashboard
 Real-time metrics pulled from the database, recent activity feed, sessions chart, and current user access card.
 
